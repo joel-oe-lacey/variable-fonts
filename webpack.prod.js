@@ -21,14 +21,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.woff$/,
+                test: /\.woff2$/,
+                // test: /\.(otf|woff2)$/,
+                // test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: 'url-loader',
                 options: {
                     // Limit at 50k. Above that it emits separate files
                     limit: 50000,
                     // url-loader sets mimetype if it's passed.
                     // Without this it derives it from the file extension
-                    mimetype: 'application/font-woff',
+                    // mimetype: 'application/font-otf',
                     // Output below fonts directory
                     name: './fonts/[name].[ext]',
                 },
